@@ -1,4 +1,5 @@
 export interface ShoppingItem {
-    itemName: string,
-    itemNumber: number
+    childKey?: string;
+    itemName: string;    
+    itemNumber: number;
 }

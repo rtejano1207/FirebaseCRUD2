@@ -19,7 +19,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database'
 export class AddShoppingPage {
 
   shoppingItem = {} as ShoppingItem;
-  shoppingItemRef$: AngularFireList<ShoppingItem>;
+  shoppingItemRef$: AngularFireList<any>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
   private database: AngularFireDatabase) {
