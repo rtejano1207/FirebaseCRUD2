@@ -54,7 +54,8 @@ export class ShoppingListPage {
           handler: () => {
             // send the user to the editShoppingItemPage and pass the key as a parameter
             //this.navCtrl.push(EditShoppingItemPage,{ shoppingItemID : shoppingItem.childKey });
-          }
+            // --- test
+          }   
         },
         {
           text: 'Delete',
