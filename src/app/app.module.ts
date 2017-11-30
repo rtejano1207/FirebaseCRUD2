@@ -11,6 +11,7 @@ import { FIREBASE_CREDENTIALS } from './firebase.credentials'
 
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list'
 import { AddShoppingPage } from '../pages/add-shopping/add-shopping'
+import { EditShoppingItemPage } from '../pages/edit-shopping-item/edit-shopping-item'
 
 import { MyApp } from './app.component';
 
@@ -19,7 +20,8 @@ import { MyApp } from './app.component';
   declarations: [
     MyApp,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    EditShoppingItemPage
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { MyApp } from './app.component';
   entryComponents: [
     MyApp,
     ShoppingListPage,
-    AddShoppingPage
+    AddShoppingPage,
+    EditShoppingItemPage
   ],
   providers: [
     StatusBar,

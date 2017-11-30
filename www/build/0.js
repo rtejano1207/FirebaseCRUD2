@@ -5,10 +5,10 @@ webpackJsonp([0],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShoppingListPageModule", function() { return ShoppingListPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditShoppingItemPageModule", function() { return EditShoppingItemPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__shopping_list__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__edit_shopping_item__ = __webpack_require__(445);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ShoppingListPageModule = (function () {
-    function ShoppingListPageModule() {
+var EditShoppingItemPageModule = (function () {
+    function EditShoppingItemPageModule() {
     }
-    ShoppingListPageModule = __decorate([
+    EditShoppingItemPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__shopping_list__["a" /* ShoppingListPage */],
+                __WEBPACK_IMPORTED_MODULE_2__edit_shopping_item__["a" /* EditShoppingItemPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__shopping_list__["a" /* ShoppingListPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__edit_shopping_item__["a" /* EditShoppingItemPage */]),
             ],
         })
-    ], ShoppingListPageModule);
-    return ShoppingListPageModule;
+    ], EditShoppingItemPageModule);
+    return EditShoppingItemPageModule;
 }());
 
-//# sourceMappingURL=shopping-list.module.js.map
+//# sourceMappingURL=edit-shopping-item.module.js.map
 
 /***/ })
 

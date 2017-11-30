@@ -1,4 +1,4 @@
-webpackJsonp([2],{
+webpackJsonp([3],{
 
 /***/ 133:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -87,6 +87,7 @@ var AddShoppingPage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__add_shopping_add_shopping__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__edit_shopping_item_edit_shopping_item__ = __webpack_require__(445);
 var __assign = (this && this.__assign) || Object.assign || function(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
@@ -104,6 +105,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -142,7 +144,7 @@ var ShoppingListPage = (function () {
                     text: 'Edit',
                     handler: function () {
                         // send the user to the editShoppingItemPage and pass the key as a parameter
-                        //this.navCtrl.push(EditShoppingItemPage,{ shoppingItemID : shoppingItem.childKey });
+                        _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__edit_shopping_item_edit_shopping_item__["a" /* EditShoppingItemPage */], { shoppingItemID: shoppingItem.childKey });
                     }
                 },
                 {
@@ -170,10 +172,10 @@ var ShoppingListPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-shopping-list',template:/*ion-inline-start:"/home/raymond/Documents/Software Projects/Steal Deal/practice/Ionic/FirebaseCRUD2/src/pages/shopping-list/shopping-list.html"*/'<!--\n  Generated template for the ShoppingListPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>Shopping List</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="navigateToAddShoppingPage()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-list>\n    <!-- repeate the ion-item as many as the items we have inside the shopping-list node-->\n    <ion-item *ngFor="let item of shoppingListItems | async" (click)="selectShoppingItem(item)">\n      <h2>Item Name: {{item.itemName}}</h2>\n      <h3>Amount: {{item.itemNumber}}</h3>\n\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/home/raymond/Documents/Software Projects/Steal Deal/practice/Ionic/FirebaseCRUD2/src/pages/shopping-list/shopping-list.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _d || Object])
     ], ShoppingListPage);
     return ShoppingListPage;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=shopping-list.js.map
@@ -203,11 +205,15 @@ webpackEmptyAsyncContext.id = 146;
 var map = {
 	"../pages/add-shopping/add-shopping.module": [
 		442,
-		1
+		2
 	],
-	"../pages/shopping-list/shopping-list.module": [
+	"../pages/edit-shopping-item/edit-shopping-item.module": [
 		443,
 		0
+	],
+	"../pages/shopping-list/shopping-list.module": [
+		444,
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -255,7 +261,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__firebase_credentials__ = __webpack_require__(440);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_shopping_list_shopping_list__ = __webpack_require__(134);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_add_shopping_add_shopping__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_component__ = __webpack_require__(441);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_edit_shopping_item_edit_shopping_item__ = __webpack_require__(445);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__app_component__ = __webpack_require__(441);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -273,21 +280,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_shopping_list_shopping_list__["a" /* ShoppingListPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_add_shopping_add_shopping__["a" /* AddShoppingPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_add_shopping_add_shopping__["a" /* AddShoppingPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_edit_shopping_item_edit_shopping_item__["a" /* EditShoppingItemPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */], {}, {
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/add-shopping/add-shopping.module#AddShoppingPageModule', name: 'AddShoppingPage', segment: 'add-shopping', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/edit-shopping-item/edit-shopping-item.module#EditShoppingItemPageModule', name: 'EditShoppingItemPage', segment: 'edit-shopping-item', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/shopping-list/shopping-list.module#ShoppingListPageModule', name: 'ShoppingListPage', segment: 'shopping-list', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -297,9 +307,10 @@ var AppModule = (function () {
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicApp */]],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_10__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_11__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_shopping_list_shopping_list__["a" /* ShoppingListPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_add_shopping_add_shopping__["a" /* AddShoppingPage */]
+                __WEBPACK_IMPORTED_MODULE_9__pages_add_shopping_add_shopping__["a" /* AddShoppingPage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_edit_shopping_item_edit_shopping_item__["a" /* EditShoppingItemPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__["a" /* StatusBar */],
@@ -375,6 +386,75 @@ var MyApp = (function () {
 }());
 
 //# sourceMappingURL=app.component.js.map
+
+/***/ }),
+
+/***/ 445:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EditShoppingItemPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__ = __webpack_require__(101);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+ * Generated class for the EditShoppingItemPage page.
+ *;
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var EditShoppingItemPage = (function () {
+    function EditShoppingItemPage(navCtrl, navParams, database) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.database = database;
+        this.shoppingItem = {};
+        // captre the shopping item ID as a nav Parameter
+        var shoppingItemID = navParams.get('shoppingItemID');
+        // log out selected item key into console
+        console.log(shoppingItemID);
+        // set the scope of our Firebase object = navParams or Selected Item
+        this.shoppingItemRef$ = this.database.object("shopping-list/" + shoppingItemID);
+        // subscribe to the obect and assign the result to this.shoppingItem
+        this.shoppingItemSubscription = this.shoppingItemRef$.valueChanges().subscribe(function (shoppingItem) { return _this.shoppingItem = shoppingItem; });
+    }
+    EditShoppingItemPage.prototype.editShoppingItem = function (shoppingItem) {
+        // update our firebase node with new item data\
+        this.shoppingItemRef$.update(shoppingItem);
+        // close the current edit template
+        this.navCtrl.pop();
+    };
+    EditShoppingItemPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad EditShoppingItemPage');
+    };
+    EditShoppingItemPage.prototype.ionViewWillLeave = function () {
+        // unscubscribe from the observable when leaving the page
+        this.shoppingItemSubscription.unsubscribe();
+    };
+    EditShoppingItemPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-edit-shopping-item',template:/*ion-inline-start:"/home/raymond/Documents/Software Projects/Steal Deal/practice/Ionic/FirebaseCRUD2/src/pages/edit-shopping-item/edit-shopping-item.html"*/'<!--\n  Generated template for the EditShoppingItemPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar color="Secondary">\n    <ion-title>{{shoppingItem.itemName}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <ion-item>\n    <ion-label floating>Item Name</ion-label>\n    <ion-input type="text" [(ngModel)]="shoppingItem.itemName"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Number</ion-label>\n    <ion-input type="number" [(ngModel)]="shoppingItem.itemNumber"></ion-input>\n  </ion-item>\n\n  <button ion-button block (click)="editShoppingItem(shoppingItem)">Edit Item</button>\n</ion-content>\n'/*ion-inline-end:"/home/raymond/Documents/Software Projects/Steal Deal/practice/Ionic/FirebaseCRUD2/src/pages/edit-shopping-item/edit-shopping-item.html"*/,
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["a" /* AngularFireDatabase */]) === "function" && _c || Object])
+    ], EditShoppingItemPage);
+    return EditShoppingItemPage;
+    var _a, _b, _c;
+}());
+
+//# sourceMappingURL=edit-shopping-item.js.map
 
 /***/ })
 

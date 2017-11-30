@@ -6,6 +6,7 @@ import { AngularFireList, AngularFireDatabase } from 'angularfire2/database'
 import { ShoppingItem } from '../../models/shopping-item/shopping.item.interface'
 
 import { AddShoppingPage } from '../add-shopping/add-shopping'
+import { EditShoppingItemPage } from '../edit-shopping-item/edit-shopping-item'
 
 import { Observable } from 'rxjs/Observable';
 
@@ -53,8 +54,8 @@ export class ShoppingListPage {
           text: 'Edit',
           handler: () => {
             // send the user to the editShoppingItemPage and pass the key as a parameter
-            //this.navCtrl.push(EditShoppingItemPage,{ shoppingItemID : shoppingItem.childKey });
-            // --- test
+            this.navCtrl.push(EditShoppingItemPage,{ shoppingItemID : shoppingItem.childKey });
+            
           }   
         },
         {
